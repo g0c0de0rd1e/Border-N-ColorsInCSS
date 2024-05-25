@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div class="box"></div>
+        <input type="text" />
+    </center>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            border: 2px solid #333;
+            transition: all 0.4s ease;
+        }
+
+        input{
+            background-color: white;
+            height: 25px;
+            width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        let box = document.querySelector("div");
+            input = document.querySelector("input");
+
+        input.addEventListener("input", () => {
+            box.style.borderRadius=input.value;
+            box.style.background=input.value;
+        })
+    </script>
+</body>
+</html>
